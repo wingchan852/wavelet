@@ -32,6 +32,8 @@ class Handler implements URLHandler {
                     }
                 }
                 return String.format("Find Strings: %s", temp.toString().replace("[", "").replace("]", ""));
+            } else if (url.getPath().contains("/show")) {
+                return String.format("Show all String: %s", list.toString().replace("[", "").replace("]", ""));
             }
             return "404 Not Found!";
         }
